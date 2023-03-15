@@ -1,31 +1,141 @@
 
+
+
 *{
-box-sizing: border-box;
-margin:0;
-padding:0 ;
+  box-sizing: border-box;
+  margin:0;
+  padding:0 ;
 
+  }
 
+@media (min-width: 320px) { 
 
+  html{
 
-}
-@media(min-widgt:600px){
+    height:100%;
+  }
+  body{
+  min-height: 100%;
+  
+  }
+  
+  .header{
+    background-color:rgb(66, 47, 179);
+    grid-area: header;
+  
+  
+  }
+  .header .texto{
+  text-transform: uppercase;
+  font-family:'Franklin Gothic Medium';
+  text-align: left;
+  padding: 0.5em;
+  }
+  
+  .nav{
+    grid-area: nav;
+    background-color: aquamarine;
+  }
+  .article{
+  
+  grid-area: article;
+  background-color:rgb(46, 9, 250);
+  display:flex;
+  height: 100%;
+  }
+  .aside{
+  grid-area: aside;
+  background-color: blueviolet;
+  
+  }
+  .footer{
+  
+  position: absolute;
+  bottom:0;
+  grid-area: footer;
+  background-color: brown;
+  width: 100%;
+  }
+  
+  
+  
   .grid-container{
-    grid-template-areas: 
-    "header header"200px
-    "nav nav" 50px
-    "article article"
-    "aside aside" 
-    "footer aside" 100px;
+  display: grid;
+  
+  gap:10px;
+  grid-template-columns: auto auto ;
+  grid-template-rows:3vw 7vw 50vw auto;
+  grid-template-areas: 
+  "nav nav " 
+  "header . "
+  "article . "  
+  "footer footer ";
+  
+  }
+  .grid-container>*{
+    box-shadow:-1px 1px 7px 0px rgba(0, 0, 0, 0.75) ; 
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  
+  }
+  .grid-item{
+    border-radius: 5px;
+   box-shadow:-1px 1px 7px 0px rgba(0, 0, 0, 0.75) ;
+   margin: 5px;
+   background-color: white;
+  }
+  .article-contenedor{
+   width: 100%;
+  
+    display: flex;
+    
+    }
   
   
+   .img-contenedor{
+   border-radius: 1px;
+  height: 50%;
+  
+  width: 100%;
+  
+   }
+  .img-art{
+  background:url("https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  width: 100%;
+  height: 100%;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   }
   
-  }
   
+   .cajaTexto{
+  height: 50%;
+  text-align: center;
+  padding: 2em;
+  
+  background-color:rgb(66, 47, 179);
+  
+   }
+   .cajaTexto .parrafo{
+  margin-top: 1em;
+  font-family: monospace;
+  font-size: 2em;
+  
+   }
+   .cajaTexto .titulo{
+  
+    font-family: 'Trebuchet MS';
+    text-transform: uppercase;
+  
+   }
+  }
 
+ 
 
-
+@media(min-width:1000px){
 
 html{
 
@@ -37,9 +147,16 @@ min-height: 100%;
 }
 
 .header{
-
+  background-color:rgb(66, 47, 179);
   grid-area: header;
-  background-color:blue;
+
+
+}
+.header .texto{
+text-transform: uppercase;
+font-family:'Franklin Gothic Medium';
+text-align: left;
+padding: 0.5em;
 }
 
 .nav{
@@ -47,11 +164,11 @@ min-height: 100%;
   background-color: aquamarine;
 }
 .article{
-margin-top: 4em;
-grid-area: article;
-background-color: beige;
-display:flex;
 
+grid-area: article;
+background-color:rgb(46, 9, 250);
+display:flex;
+height: 100%;
 }
 .aside{
 grid-area: aside;
@@ -59,23 +176,29 @@ background-color: blueviolet;
 
 }
 .footer{
+
 position: absolute;
-bottom: 0;
+bottom:0;
 grid-area: footer;
 background-color: brown;
 width: 100%;
 }
 
+.article-contenedor .c1{
 
+grid-column: 1 /span 2;
+
+}
 
 .grid-container{
 display: grid;
+
 gap:10px;
 grid-template-columns: auto auto auto;
-grid-template-rows:50px 100px 60% 100px;
+grid-template-rows:2vw 5vw 30vw auto;
 grid-template-areas: 
 "nav nav nav" 
-"header header header"
+"header . ."
 "article article article"  
 "footer footer footer";
 
@@ -88,23 +211,55 @@ text-align: center;
 
 }
 .grid-item{
- width:100%;
+  border-radius: 5px;
  box-shadow:-1px 1px 7px 0px rgba(0, 0, 0, 0.75) ;
  margin: 5px;
+ background-color: white;
 }
-
-
-
- .img-articulo{
-  background:url("https://blogs.iadb.org/conocimiento-abierto/wp-content/uploads/sites/10/2019/12/banner-lecciones-aprendidas-proyectos-desarrollo-2019.jpg");
-  
- height: 50%;
+.article-contenedor{
  width: 100%;
- max-width: 1000px;
- max-height: 1000px;
-background-size: contain;
+
+  display: flex;
+  
+  }
+
+
+ .img-contenedor{
+ border-radius: 1px;
+height: 50%;
+
+width: 100%;
+
+ }
+.img-art{
+background:url("https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1600");
+width: 100%;
+height: 100%;  
+background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 
+}
+
+
+ .cajaTexto{
+height: 50%;
+text-align: center;
+padding: 2em;
+
+background-color:rgb(66, 47, 179);
+
  }
- 
+ .cajaTexto .parrafo{
+margin-top: 1em;
+font-family: monospace;
+font-size: 2em;
+
+ }
+ .cajaTexto .titulo{
+
+  font-family: 'Trebuchet MS';
+  text-transform: uppercase;
+
+ }
+}
